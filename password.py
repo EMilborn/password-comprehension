@@ -1,19 +1,22 @@
+# def isPassword(pw):
+#     uppers = [i for i in pw if i.isupper()]
+#     lowers = [i for i in pw if i.islower()]
+#     numbers = [i for i in pw if i.isdigit()]
+#     return bool(len(uppers) and len(lowers) and len(numbers))
+
 def isPassword(pw):
-    uppers = [i for i in pw if i.isupper()]
-    lowers = [i for i in pw if i.islower()]
-    numbers = [i for i in pw if i.isdigit()]
-    return bool(len(uppers) and len(lowers) and len(numbers))
+    return scorePassword(pw) > 0
 
 #print isPassword('AB1cc1')
 #print isPassword('AbCd')
 #print isPassword('AA1B2')
 
 def scorePassword(pw):
-    if not isPassword(pw):
-        return 0
     uppers = [i for i in pw if i.isupper()]
     lowers = [i for i in pw if i.islower()]
     numbers = [i for i in pw if i.isdigit()]
+    if not (len(uppers) and len(lowers) and len(numbers)):
+        return 0
     nonalpha = [i for i in pw if not i.isalnum()]
     score = len(pw) / 4
     score += min(len(uppers), len(lowers))  # mixture is important man
