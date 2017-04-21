@@ -24,8 +24,8 @@ def scorePassword(pw):
     score += len(nonalpha)  # nonalpha masterrace
     return min(score, 10)
 
-print scorePassword('SpOO00OkYsEcUR1tY!!')
-print scorePassword('aB1')
-print scorePassword('thegreatestpasswordofalltimeWOWEE')
-print scorePassword('1(o_O)/')
-print scorePassword('mixuppercaseandlowercasE1')
+#print scorePassword('SpOO00OkYsEcUR1tY!!')
+#print scorePassword('aB1')
+#print scorePassword('thegreatestpasswordofalltimeWOWEE')
+#print scorePassword('1(o_O)/')
+#print scorePassword('mixuppercaseandlowercasE1')
